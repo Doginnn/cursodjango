@@ -8,4 +8,6 @@ router.register('posts', views.PostModelViewset)
 urlpatterns = [
     path('', views.post_list, name= 'post_list'),
     path('api/v1/', include(router.urls)),
+    path('api/token/', views.CreateTokenView.as_view(), name='token')
+    
 ]
